@@ -28,7 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-AUTH_USER_MODEL = 'registration.Account'
+AUTH_USER_MODEL = 'account.Account'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 
 # Application definition
@@ -41,10 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'bootstrap5',
-
-    'registration',
-    'authentication',
+    'account'
 ]
 
 MIDDLEWARE = [
@@ -84,15 +83,14 @@ WSGI_APPLICATION = 'ad_game_site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'game_db',
-        'USER': 'game_owner',
-        'PASSWORD': 'game_owner_password',
+        'NAME': 'game_site_db',
+        'USER': 'game_site',
+        'PASSWORD': 'game_site_password',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
 }
 
-AUTH_USER_MODEL = 'registration.Account'
 
 
 # Password validation
