@@ -1,23 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
-
     {% load static %}
-</head>
-<body class="container">
-<ul class ="list-group">
-    <li class="list-group-item">
-        User: {{ user }}
-    </li>
-    <li class="list-group-item">
-        <a href="{% url 'home' %}">Home</a>
-    </li>
-</ul>
-    {% block content %}
-    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/center.css' %}">
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/code.css' %}">
+    <link rel="stylesheet" href="{% static 'css/password_reset_form.css' %}">
 
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-img">
+                <a href="/"><img class="img" src="https://seeklogo.com/images/S/shopee-logo-065D1ADCB9-seeklogo.com.png" alt="img"></a>
+            </div>
+            <div class="header-content">
+                <a href="#">Правила игры</a>
+                <a href="#">Призы</a>
+                <a href="#">Победители</a>
+                <a href="#">Вопрос-ответ</a>
+                {% if not user.is_authenticated %}
+                    <form action="{% url 'login'%}">
+                        <button class="enter">ВХОД</button>
+                    </form>
+                    <form action="{% url 'register'%}">
+                        <button>РЕГИСТРАЦИЯ</button>
+                    </form>
+                {% else %}
+                    <form action="{% url 'logout'%}">
+                        <button class="enter">ВЫХОД</button>
+                    </form>
+                {% endif %}
+            </div>
+            <div class="header-contact">
+                <img class="phone-img" src="https://cabandos.by/images/icons/phone.svg" alt="img">
+                <div class="contact">
+                    <h4>горячая линия</h4>
+                    <a class="phone" href="#">+375 17 38878 89</a>
+                </div>
+            </div>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </div>
 </body>
 </html>

@@ -35,7 +35,7 @@ class RegistrationUserForm(forms.Form):
         father_name = self.cleaned_data['father_name']
         phone = self.cleaned_data['phone']
         email = self.cleaned_data['email']
-        password = make_password(self.cleaned_data['password1'])
+        password = self.cleaned_data['password1']
 
         account = Account.objects.create_user(email=email, password=password)
         User.objects.create(name=name, surname=surname, father_name=father_name, phone=phone, account_id=account.id)

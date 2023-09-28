@@ -1,18 +1,31 @@
 {% extends 'index.html' %}
 
 {% block content %}
-    <h1>Login</h1>
-    <hr>
-
-    {% if form.errors %}
-        <p>{{ form.errors.error }}</p>
-    {% endif %}
 
     <form action="{% url 'login' %}" method="post">
-    {{ form }}
     {% csrf_token %}
-    <button type="submit">Войти</button>
-    </form>
 
-    <a href="{% url 'password_reset' %}">Забыли пароль?</a>
+      <div class="container">
+          <h2>ВХОД</h2>
+        <div class="contact-info enter-info">
+            <div class="email">
+                <h4>E-mail</h4>
+                {{ form.username }}
+            </div>
+            <div class="Password">
+                <h4>Пароль</h4>
+                {{ form.password }}
+            </div>
+            {% if form.errors %}
+                <p>{{ form.errors.error }}</p>
+            {% endif %}
+        </div>
+      </div>
+
+    <button class="enter-btn" type="submit">Войти</button>
+    </form>
+    <div class="links">
+        <a href="{% url 'password_reset' %}">Забыли пароль?</a>
+        <a href="{% url 'register' %}">Регистация</a>
+    </div>
 {% endblock %}
