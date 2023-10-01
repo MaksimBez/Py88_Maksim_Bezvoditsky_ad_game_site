@@ -1,0 +1,61 @@
+.registration, .points {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    width: 317px;
+    margin-top: -20px;
+}
+.btn-reg {
+    width: 220px;
+    margin-left: 10px;
+}
+
+h5{
+    margin-bottom: 20px;
+    text-align: center;
+    font: normal 700 16px/20px "Helios", sans-serif;
+    color: #003E9A;
+    margin-left: -30px;
+}
+.circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 170px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #003E9A;
+  border-radius: 50%;
+  width: 135px;
+  height: 135px;
+    margin-bottom: 30px;
+}
+.points_txt {
+  font: normal 700 20px/110% "Futura", sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+    margin-top: 10px;
+}
+.points_val {
+    font: normal 700 18px/110% "Futura", sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: -10px;
+}
+.change_btn {
+    background-color: rgb(223, 21, 21);
+margin-left: 10px;
+}
+.code {
+    display: flex;
+    justify-content: space-between;
+}
+

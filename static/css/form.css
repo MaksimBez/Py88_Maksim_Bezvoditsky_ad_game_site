@@ -1,0 +1,136 @@
+h2 {
+  display: flex;
+  justify-content: center;
+  font: normal 700 40px/40px "Futura", sans-serif;
+  text-transform: uppercase;
+  color: #e0061d !important;
+  padding-bottom: 30px;
+}
+.personal-info,
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.contact-info input {
+  width: 325px;
+
+}
+h4 {
+  display: block;
+  margin-bottom: 10px;
+  font: normal 700 16px/20px "Helios", sans-serif;
+  color: #003e9a;
+}
+
+ input {
+  width: 100%;
+  width: 206px;
+  margin: 0 0 20px;
+  padding: 7px 13px 9px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: #ffe37a;
+  font: normal 400 18px/25px "Helios", sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: border-color 0.5s;
+  transition: border-color 0.5s;
+}
+
+.phone,
+.lokalization {
+  margin-top: 0.5px;
+}
+
+.house input {
+  width: 94px;
+}
+
+.flat input {
+  width: 95px;
+}
+
+.building input {
+  width: 95px;
+}
+
+.street input {
+  width: 325px;
+}
+.privacy {
+  margin-left: 257px;
+}
+.privacy-firsttext,
+.privacy-secondtext,
+.privacy-thirdtext {
+  display: flex;
+}
+.privacy-firsttext input {
+  width: 20px;
+}
+.privacy-secondtext input {
+  width: 20px;
+}
+.privacy-thirdtext input {
+  width: 20px;
+}
+h5 {
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 24px;
+  margin: 0 auto 16px 0;
+  padding-left: 40px;
+  font: normal 400 12px/110% "Helios", sans-serif;
+  letter-spacing: 1px;
+  color: #003e9a;
+  cursor: pointer;
+  width: 550px;
+}
+.button {
+  align-items: center;
+  max-width: 100%;
+  padding: 20px 35px;
+  border: none;
+  font: normal 700 16px/20px "Helios", sans-serif;
+  color: #ffffff;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.65);
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 40px;
+  background-color: #003e9a;
+  margin-bottom: 100px;
+  margin-left: 257px;
+}
+
+.enter-info input {
+  width: 450px;
+  margin-bottom: 40px;
+}
+.enter-btn{
+  margin: auto;
+background-color: #0a53be;
+}
+.enter-info {
+  display: block;
+  /*margin-left: 375px;*/
+text-align: center;
+
+}
+.links a{
+  display: block;
+color: #003E9A;
+}
+.links {
+  margin-top: 30px;
+  text-align: center;
+
+}

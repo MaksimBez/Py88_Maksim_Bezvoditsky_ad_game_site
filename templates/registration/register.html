@@ -1,0 +1,78 @@
+{% extends 'index.html' %}
+
+
+{% block content %}
+    <form action="{% url 'register' %}" method="post" class="registration__form">
+
+        {% csrf_token %}
+
+        <div class="container"><form action="{% url 'register' %}" method="post" class="registration__form">
+
+        {% csrf_token %}
+            <div class="form">
+                <h2>РЕГИСТРАЦИЯ</h2>
+                <div class="form-block">
+                    <div class="personal-info">
+                        <div class="lastname">
+                            <h4>Фамилия</h4>
+                            {{ form.surname }}
+                        </div>
+                        <div class="firstname">
+                            <h4>Имя</h4>
+                            {{ form.name }}
+                        </div>
+                        <div class="patronymic">
+                            <h4>Отчество</h4>
+                            {{ form.father_name }}
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="email">
+                            <h4>E-mail</h4>
+                            {{ form.email }}
+                        </div>
+                        <div class="phone">
+                            <h4>Телефон</h4>
+                            {{ form.phone }}
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="password1">
+                            <h4>Пароль</h4>
+                            {{ form.password1 }}
+                        </div>
+                        <div class="password2">
+                            <h4>Подтверждение пароля</h4>
+                            {{ form.password2 }}
+                        </div>
+                    </div>
+{#                    <div class="privacy">#}
+{#                        <div class="privacy-firsttext">#}
+{#                            <input type="checkbox" required="">#}
+{#                            <h5>Я ознакомлен и согласен с настоящими#}
+{#                                Правилами рекламной игры и Политикой в отношении обработки персональных данных ЗАО#}
+{#                                «Серволюкс#}
+{#                                Агро»,#}
+{#                                а также подтверждаю достижение мной возраста 16 лет</h5>#}
+{#                        </div>#}
+{#                        <div class="privacy-secondtext">#}
+{#                            <input type="checkbox" required="">#}
+{#                            <h5>Я ознакомлен с разъяснениями моих прав, связанных с обработкой персональных данных, и даю#}
+{#                                согласие ЗАО «Серволюкс Агро» на обработку моих персональных данных в целях проведения#}
+{#                                рекламной игры «Раскрути Cabandos на призы». </h5>#}
+{#                        </div>#}
+{#                        <div class="privacy-thirdtext">#}
+{#                            <input type="checkbox" required="">#}
+{#                            <h5>Я ознакомлен с разъяснениями моих прав, связанных с обработкой персональных данных, и даю#}
+{#                                согласие ЗАО «Серволюкс Агро» на обработку моих персональных данных в целях направления#}
+{#                                материалов рекламного и/или информационного характера. </h5>#}
+{#                        </div>#}
+{#                    </div>#}
+                </div>
+                <button class="button">Зарегистрироваться</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}
+
+

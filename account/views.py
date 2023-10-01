@@ -27,4 +27,6 @@ class RegistrationUser(View):
         context = {'form': form}
         return render(request, self.template_name, context)
 
-
+"""
+Прописать else - ошибки
+"""

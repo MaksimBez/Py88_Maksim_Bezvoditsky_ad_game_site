@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'account'
+    'account',
+    'codes'
 ]
 
 MIDDLEWARE = [
@@ -83,9 +84,9 @@ WSGI_APPLICATION = 'ad_game_site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'game_site_db',
-        'USER': 'game_site',
-        'PASSWORD': 'game_site_password',
+        'NAME': 'ad_game_site_db',
+        'USER': 'ad_game_site',
+        'PASSWORD': 'ad_game_site_password',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }

@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    {% block title %}
+
+    {% endblock %}
+
+    <form action="{% url 'codes' %}" method="post">
+    {% csrf_token %}
+
+        <div>
+            {% if user.is_authenticated %}
+                <h3>Добро пожаловать: {{ user.user.name }}</h3>
+                <div class="code">
+                  <div class="sidenav">
+                      <a class="sidenav-txt" href="#">Регистрация уникального кода</a>
+                      <a class="sidenav-txt" href="#">Призы и баллы</a>
+                      <a class="sidenav-txt" href="#">Личные данные</a>
+                  </div>
+                 <div class="registration">
+                     <h2>РЕГИСТРАЦИЯ КОДА</h2>
+                     <h5>Введите код с упаковки</h5>
+                     {{ form.code }}
+                     <button class="button btn-reg">Зарегистрировать</button>
+                 </div>
+                 <div class="points">
+                     <div class="circle">
+                         <p class="points_txt">У ВАС</p>
+                         <p class="points_val">{{ number_of_codes }} БАЛЛОВ</p>
+                     </div>
+                     <button class="button change_btn">Обменять на шансы</button>
+                 </div>
+                </div>
+            {% endif %}
+        </div>
+    </form>
+{% endblock %}
