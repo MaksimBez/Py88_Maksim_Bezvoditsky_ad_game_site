@@ -3,8 +3,8 @@ from django.views import View
 from django.contrib import messages
 
 from codes.forms import RegistrationCodesForm
-from codes.models import UsersCodes
-from account.models import Account
+from codes.counter import counter
+
 
 
 class RegistrationCodes(View):
@@ -14,18 +14,18 @@ class RegistrationCodes(View):
     def get(self, request):
         form = RegistrationCodesForm()
         user = request.user
-        account_id = Account.objects.get(email=user).id
-        number_of_codes = UsersCodes.objects.filter(account_id=account_id).count()
-        context = {'form': form, 'number_of_codes': number_of_codes}
+        number_of_available_codes = counter(user)
+        context = {'form': form, 'number_of_available_codes': number_of_available_codes}
         return render(request, self.template_name, context)
 
     def post(self, request):
         form = RegistrationCodesForm(request.POST)
+        user = request.user
+        number_of_available_codes = counter(user)
         if form.is_valid():
-            user = request.user
             form.save(user)
-            return redirect('home')
-        context = {'form': form}
+            return redirect('codes')
+        context = {'form': form, 'number_of_available_codes': number_of_available_codes}
         return render(request, self.template_name, context)
 
 """

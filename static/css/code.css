@@ -17,7 +17,7 @@ h5{
     margin-bottom: 20px;
     text-align: center;
     font: normal 700 16px/20px "Helios", sans-serif;
-    color: #003E9A;
+    color: #0a53be;
     margin-left: -30px;
 }
 .circle {
@@ -30,7 +30,7 @@ h5{
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #003E9A;
+  background-color: #0a53be;
   border-radius: 50%;
   width: 135px;
   height: 135px;
@@ -58,4 +58,10 @@ margin-left: 10px;
     display: flex;
     justify-content: space-between;
 }
-
+.prize {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 5px;
+    padding: 40px;
+}

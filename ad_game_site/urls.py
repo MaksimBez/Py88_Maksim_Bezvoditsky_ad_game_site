@@ -10,6 +10,7 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('account/', include('account.urls')),
     path('', include('codes.urls')),
+    path('', include('prizes.urls')),
 
 ] + static(settings.STATIC_URL)
 

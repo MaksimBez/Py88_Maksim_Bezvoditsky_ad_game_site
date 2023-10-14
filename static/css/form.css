@@ -22,7 +22,7 @@ h4 {
   display: block;
   margin-bottom: 10px;
   font: normal 700 16px/20px "Helios", sans-serif;
-  color: #003e9a;
+  color: #0a53be;
 }
 
  input {
@@ -89,7 +89,7 @@ h5 {
   padding-left: 40px;
   font: normal 400 12px/110% "Helios", sans-serif;
   letter-spacing: 1px;
-  color: #003e9a;
+  color: #0a53be;
   cursor: pointer;
   width: 550px;
 }
@@ -106,8 +106,8 @@ h5 {
   box-sizing: border-box;
   cursor: pointer;
   border-radius: 40px;
-  background-color: #003e9a;
-  margin-bottom: 100px;
+  background-color: #0a53be;
+  margin-bottom: 1px;
   margin-left: 257px;
 }
 
@@ -127,7 +127,7 @@ text-align: center;
 }
 .links a{
   display: block;
-color: #003E9A;
+color: #0a53be;
 }
 .links {
   margin-top: 30px;
