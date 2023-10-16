@@ -10,15 +10,6 @@
 }
 .btn-reg {
     width: 220px;
-    margin-left: 10px;
-}
-
-h5{
-    margin-bottom: 20px;
-    text-align: center;
-    font: normal 700 16px/20px "Helios", sans-serif;
-    color: #0a53be;
-    margin-left: -30px;
 }
 .circle {
   display: flex;
