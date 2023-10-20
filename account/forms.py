@@ -3,6 +3,33 @@ from account.models import User, Account
 from django import forms
 from django.contrib.auth.hashers import make_password
 from django.forms.forms import BaseForm
+from django.contrib.auth.views import AuthenticationForm as DjangoAuthenticationForm
+from django.contrib.auth import authenticate
+from django.core.exceptions import ValidationError
+
+
+class AuthenticationForm(DjangoAuthenticationForm):
+    def clean(self):
+        username = self.cleaned_data.get("username")
+        password = self.cleaned_data.get("password")
+
+        if username is not None and password:
+            self.user_cache = authenticate(
+                self.request, username=username, password=password
+            )
+            if not self.user_cache.is_active:                           # заменил email_verify на is_active
+                send_email_for_verify(self.request, self.user_cache)
+                raise ValidationError(
+                    'Email not verify, check your email',
+                    code="invalid_login",
+                )
+
+            if self.user_cache is None:
+                raise self.get_invalid_login_error()
+            else:
+                self.confirm_login_allowed(self.user_cache)
+
+        return self.cleaned_data
 
 
 class RegistrationUserForm(forms.Form):
