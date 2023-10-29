@@ -6,6 +6,9 @@ from django.forms.forms import BaseForm
 from django.contrib.auth.views import AuthenticationForm as DjangoAuthenticationForm
 from django.contrib.auth import authenticate
 from django.core.exceptions import ValidationError
+from account.utils import send_email_for_verify
+from captcha.fields import CaptchaField
+
 
 
 class AuthenticationForm(DjangoAuthenticationForm):
@@ -17,9 +20,9 @@ class AuthenticationForm(DjangoAuthenticationForm):
             self.user_cache = authenticate(
                 self.request, username=username, password=password
             )
-            if not self.user_cache.is_active:                           # заменил email_verify на is_active
+            if not self.user_cache.email_verify:
                 send_email_for_verify(self.request, self.user_cache)
-                raise ValidationError(
+                raise ValidationError(                                  # Не выводится ошибка в форме!!!
                     'Email not verify, check your email',
                     code="invalid_login",
                 )
@@ -47,6 +50,7 @@ class RegistrationUserForm(forms.Form):
         widget=forms.PasswordInput, max_length=20, label='Пароль')
     password2 = forms.CharField(
         widget=forms.PasswordInput, max_length=20, label='Подтверждение пароля')
+    captcha = CaptchaField()
 
     def clean(self):
         super().clean()

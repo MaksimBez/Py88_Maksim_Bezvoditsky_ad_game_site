@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    {% block title %}
+
+    {% endblock %}
+
+        <div>
+            {% if user.is_authenticated %}
+                <h3>Добро пожаловать: {{ user.user.name }}</h3>
+                <div class="code">
+                    <div>
+                        <div class="sidenav">
+                            <a class="sidenav-txt" href="{% url 'promocode'%}">Регистрация промокода</a>
+                            <a class="sidenav-txt" href="{% url 'prize'%}">Призы и баллы</a>
+                            <a class="sidenav-txt" href="{% url 'my_prize' %}">Мои призы</a>
+                        </div>
+                    </div>
+                    <div class="registration">
+                         <h2>МОИ ПРИЗЫ</h2>
+                         <h4>Вы участвуете в розыгрыше </h4>
+
+                        <div class="prize">
+                            {% for my_prize in my_prizes %}
+                                 {{ my_prize.prize }}<br><br><br><br>
+                            {% empty %}
+                                Вы еще не выбрали ни одного приза для участия!
+                                Добавьте промокод, а после выбирите приз!
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="points">
+                        <div class="circle-width">
+                            <div class="circle">
+                                <p class="points_txt">У ВАС</p>
+                                <p class="points_val">{{ number_of_available_promocodes }} БАЛЛОВ</p>
+                            </div>
+                            <button onclick="document.location={% url 'promocode'%}" class="button change_btn">Добавить промокод</button>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+{% endblock %}

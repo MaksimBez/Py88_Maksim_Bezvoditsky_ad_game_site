@@ -27,6 +27,9 @@
   height: 135px;
     margin-bottom: 30px;
 }
+.circle-width {
+    width: 245px;
+}
 .points_txt {
   font: normal 700 20px/110% "Futura", sans-serif;
   color: #FFFFFF;

@@ -12,6 +12,7 @@ from account.utils import send_email_for_verify
 
 User = get_user_model()
 
+
 class MyLoginView(LoginView):
     form_class = AuthenticationForm
 
@@ -21,9 +22,8 @@ class EmailVerify(View):
     def get(self, request, uidb64, token):
         user = self.get_user(uidb64)
 
-        if self.user is not None and token_generator.check_token(user, token):
-            user.is_active = True               # тут мы меняем is_active на True, и пользователь может залогиниться
-                                                # у автора это email_verify = True
+        if user is not None and token_generator.check_token(user, token):
+            user.email_verify = True
             user.save()
             login(request, user)
             return redirect('home')
@@ -62,12 +62,8 @@ class RegistrationUser(View):
             form.save()
             email = form.cleaned_data.get('email')
             password = form.cleaned_data.get('password1')
-            user = authenticate(email=email, password=password)         # смотреть пояснение в account/models.py
+            user = authenticate(email=email, password=password)
             send_email_for_verify(request, user)
             return redirect('confirm_email')
         context = {'form': form}
         return render(request, self.template_name, context)
-
-"""
-Прописать else - ошибки
-"""

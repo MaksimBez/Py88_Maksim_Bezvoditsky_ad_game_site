@@ -22,6 +22,6 @@ def send_email_for_verify(request, user):
     email = EmailMessage(
         'Verify_email',
         message,
-        to=[user.email],    # Проверял, тут пишет что у user нет атрибута email
+        to=[user],
     )
-    email.send()        # Вылетает ошибка
+    email.send()

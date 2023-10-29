@@ -9,11 +9,13 @@
     {% if user.is_authenticated %}
         <h3>Добро пожаловать: {{ user.user.name }}</h3>
         <div class="code">
-          <div class="sidenav">
-              <a class="sidenav-txt" href="{% url 'codes'%}">Регистрация уникального кода</a>
-              <a class="sidenav-txt" href="{% url 'prizes'%}">Призы и баллы</a>
-              <a class="sidenav-txt" href="#">Личные данные</a>
-          </div>
+            <div>
+                <div class="sidenav">
+                    <a class="sidenav-txt" href="{% url 'promocode'%}">Регистрация промокода</a>
+                    <a class="sidenav-txt" href="{% url 'prize'%}">Призы и баллы</a>
+                    <a class="sidenav-txt" href="{% url 'my_prize'%}">Мои призы</a>
+                </div>
+            </div>
         </div>
     {% endif %}
 </div>

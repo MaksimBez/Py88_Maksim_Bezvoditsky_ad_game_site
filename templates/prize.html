@@ -1,0 +1,56 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    {% block title %}
+
+    {% endblock %}
+
+    <form action="" method="post">
+    {% csrf_token %}
+
+        <div>
+            {% if user.is_authenticated %}
+                <h3>Добро пожаловать: {{ user.user.name }}</h3>
+                <div class="code">
+                    <div>
+                        <div class="sidenav">
+                            <a class="sidenav-txt" href="{% url 'promocode'%}">Регистрация промокода</a>
+                            <a class="sidenav-txt" href="{% url 'prize'%}">Призы и баллы</a>
+                            <a class="sidenav-txt" href="{% url 'my_prize' %}">Мои призы</a>
+                        </div>
+                    </div>
+                    <div class="registration">
+                         <h2>ОБМЕНЯЙТЕ ШАНСЫ НА ПРИЗЫ</h2>
+                         <h4>Выберите свой приз</h4>
+
+                        <div class="prize">
+                            {% for prize in prizes %}
+                                 {{ prize.prize }}:{{ prize.cost }} баллов<br><br><br><br>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="points">
+                        <div class="circle-width">
+                            <div class="circle">
+                                <p class="points_txt">У ВАС</p>
+                                <p class="points_val">{{ number_of_available_promocodes }} БАЛЛОВ</p>
+                            </div>
+                        </div>
+                        <div class="prize">
+                            {% for prize in prizes %}
+                                <form action="{% url 'prize' %}" method="post">
+                                {% csrf_token %}
+                                    <label>
+                                        <input type="text" name="prize_id" hidden value="{{ prize.id }}">
+                                    </label>
+                                    <button class="button change_btn">Зачислить</button>
+                                </form>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </form>
+{% endblock %}
