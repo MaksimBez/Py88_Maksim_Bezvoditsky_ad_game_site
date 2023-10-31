@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/center.css' %}">
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/code.css' %}">
+    <link rel="stylesheet" href="{% static 'js/js-captcha-refresh.js' %}">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-img">
+                <a href="/"><img class="img" src="https://seeklogo.com/images/S/shopee-logo-065D1ADCB9-seeklogo.com.png" alt="img"></a>
+            </div>
+            <div class="header-content">
+                <a href="#">Правила игры</a>
+                <a href="#">Призы</a>
+                <a href="#">Победители</a>
+                <a href="#">Вопрос-ответ</a>
+                {% if not user.is_authenticated %}
+                    <form action="{% url 'login'%}">
+                        <button class="enter">ВХОД</button>
+                    </form>
+                    <form action="{% url 'register'%}">
+                        <button>РЕГИСТРАЦИЯ</button>
+                    </form>
+                {% else %}
+                    <form action="{% url 'logout'%}">
+                        <button class="enter">ВЫХОД</button>
+                    </form>
+                {% endif %}
+            </div>
+            <div class="header-contact">
+                <img class="phone-img" src="https://cabandos.by/images/icons/phone.svg" alt="img">
+                <div class="contact">
+                    <h4>горячая линия</h4>
+                    <a class="phone" href="#">+375 17 3674 96</a>
+                </div>
+            </div>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

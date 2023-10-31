@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block content %}
+        {% block title %}
+
+        {% endblock %}
+
+<div>
+    {% if user.is_authenticated %}
+        <h3>Добро пожаловать: {{ user.user.name }}</h3>
+        <div class="code">
+            <div>
+                <div class="sidenav">
+                    <a class="sidenav-txt" href="{% url 'promocode'%}">Регистрация промокода</a>
+                    <a class="sidenav-txt" href="{% url 'prize'%}">Призы и баллы</a>
+                    <a class="sidenav-txt" href="{% url 'my_prize'%}">Мои призы</a>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
