@@ -5,16 +5,13 @@ from promocode.validators import promocode_validate
 from account.models import Account
 from promocode.models import UserTransaction
 from prize.models import Prize
-
-
-
+from django.core.exceptions import ValidationError
 
 
 class RegistrationPromocodeForm(forms.Form):
     promocode = forms.CharField(
         widget=forms.TextInput, max_length=12, label='Промокод', validators=[promocode_validate]
     )
-
 
     def save(self, user):
         promocode = self.cleaned_data['promocode']

@@ -18,12 +18,14 @@ class SelectingPrize(View):
         prizes = cache.get('prizes')
         if not prizes:
             prizes = Prize.objects.all()
-            cache.set('prizes', prizes, 10)
-
-        user = request.user
+            cache.set('prizes', prizes, 60)
+        user = cache.get('user')
+        if not user:
+            user = request.user
+            cache.set('user', user, 60)
         number_of_available_promocodes = counter(user)
         return render(request, self.template_name, context={
-            'prizes': prizes, 'number_of_available_promocodes': number_of_available_promocodes})
+            'prizes': prizes, 'number_of_available_promocodes': number_of_available_promocodes, 'no_count': False})
 
 
     def post(self, request):
@@ -38,7 +40,7 @@ class SelectingPrize(View):
             form.save(user, prize_id)
             return redirect('prize')
         return render(request, self.template_name, context={
-            'prizes': prizes, 'number_of_available_promocodes': number_of_available_promocodes})
+            'prizes': prizes, 'number_of_available_promocodes': number_of_available_promocodes, 'no_count': True})
 
 
 class MyPrize(View):
@@ -46,12 +48,11 @@ class MyPrize(View):
 
     def get(self, request):
         user = request.user
-        account_id = Account.objects.get(email=user).id
+        account_id = cache.get('account_id')
+        if not account_id:
+            account_id = Account.objects.get(email=user).id
+            cache.set('account_id', account_id, 60)
         my_prizes = UserTransaction.objects.filter(account_id=account_id).all()
         number_of_available_promocodes = counter(user)
         return render(request, self.template_name, context={
             'my_prizes': my_prizes, 'number_of_available_promocodes': number_of_available_promocodes})
-
-"""
-Прописать ошибки else
-"""

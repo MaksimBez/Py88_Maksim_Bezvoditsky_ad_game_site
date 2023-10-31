@@ -20,7 +20,7 @@ def send_email_for_verify(request, user):
         context=context,
     )
     email = EmailMessage(
-        'Verify_email',
+        'Подтверждение пароля',
         message,
         to=[user],
     )

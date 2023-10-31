@@ -47,6 +47,9 @@
                                     <button class="button change_btn">Зачислить</button>
                                 </form>
                             {% endfor %}
+                            {% if no_count %}
+                                <p>У вас не хватает баллов</p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

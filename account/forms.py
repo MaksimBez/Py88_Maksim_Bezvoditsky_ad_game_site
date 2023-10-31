@@ -1,3 +1,5 @@
+import re
+
 from django.forms import TextInput, PasswordInput
 from account.models import User, Account
 from django import forms
@@ -8,6 +10,7 @@ from django.contrib.auth import authenticate
 from django.core.exceptions import ValidationError
 from account.utils import send_email_for_verify
 from captcha.fields import CaptchaField
+from django.core.validators import RegexValidator
 
 
 
@@ -17,13 +20,19 @@ class AuthenticationForm(DjangoAuthenticationForm):
         password = self.cleaned_data.get("password")
 
         if username is not None and password:
+            if not Account.objects.filter(email=username).exists():
+                raise ValidationError('Пользователь к таким email не существует')
+            user = Account.objects.filter(email=username).first()
+            if user:
+                if not user.check_password(password):
+                    raise ValidationError('Неверный пароль', code='password')
             self.user_cache = authenticate(
                 self.request, username=username, password=password
             )
             if not self.user_cache.email_verify:
                 send_email_for_verify(self.request, self.user_cache)
-                raise ValidationError(                                  # Не выводится ошибка в форме!!!
-                    'Email not verify, check your email',
+                raise ValidationError(
+                    'Email не подтвержден, проверьте вашу почту',
                     code="invalid_login",
                 )
 
@@ -50,13 +59,17 @@ class RegistrationUserForm(forms.Form):
         widget=forms.PasswordInput, max_length=20, label='Пароль')
     password2 = forms.CharField(
         widget=forms.PasswordInput, max_length=20, label='Подтверждение пароля')
-    captcha = CaptchaField()
+    # captcha = CaptchaField()
 
     def clean(self):
         super().clean()
         form_data = self.cleaned_data
+        if not re.match(r'^[a-zA-Z0-9]+$', form_data['password1']):
+            raise ValidationError("Пароль должен содержать латинские буквы")
+        if form_data['password1'].isalpha():
+            raise ValidationError("Пароль должен содержать цифры и заглавные буквы")
         if form_data['password1'] != form_data['password2']:
-            self._errors["password2"] = ["Password do not match"]
+            self._errors["password2"] = ["Пароли не совпадают"]
             del form_data['password1']
         return form_data
 

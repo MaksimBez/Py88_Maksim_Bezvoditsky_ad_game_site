@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    ports:
+      - "9001:8000"
+    depends_on:
+      - pgdb
+
+  pgdb:
+    image: postgres:15.1
+    environment:
+      POSTGRES_PASSWORD: ad_game_site_password
+      POSTGRES_USER: ad_game_site
+      POSTGRES_DB: ad_game_site_db
+    container_name: pgdb
+    volumes:
+      - postgres_data:/var/postgres/data/
+    ports:
+      - "5433:5432"
+volumes:
+  postgres_data:

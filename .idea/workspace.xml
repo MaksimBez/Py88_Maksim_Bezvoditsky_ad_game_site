@@ -5,62 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e588f88-426e-4990-9719-189c876ad3b0" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/prize/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promocode/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promocode/counter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promocode/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d5040b0e-d3cd-4853-9ab1-8a41c58073ab.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d5040b0e-d3cd-4853-9ab1-8a41c58073ab/storage_v2/_src_/database/ad_game_site_db.xceG2A.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d5040b0e-d3cd-4853-9ab1-8a41c58073ab/storage_v2/_src_/database/ad_game_site_db.xceG2A/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d5040b0e-d3cd-4853-9ab1-8a41c58073ab/storage_v2/_src_/database/ad_game_site_db.xceG2A/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d5040b0e-d3cd-4853-9ab1-8a41c58073ab/storage_v2/_src_/database/ad_game_site_db.xceG2A/schema/public.abK9xQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/apps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/helpers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0002_account_is_active.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0003_alter_account_is_active.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ad_game_site/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ad_game_site/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ad_game_site/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ad_game_site/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/prize/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/promocode/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/counter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/promocode/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/migrations/0002_userstransactions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/prize/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/promocode/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/prize/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/promocode/validators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/promocode/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prizes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/promocode/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prizes/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prizes/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/prize/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prizes/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prizes/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/promocode/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prizes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/prize/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prizes/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/promocode/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prizes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/prize/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prizes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/prize/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/code.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/code.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/sidebar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/codes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/promocode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/prizes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/prize.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prize/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/prize/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prize/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/prize/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promocode/counter.py" beforeDir="false" afterPath="$PROJECT_DIR$/promocode/counter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promocode/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/promocode/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promocode/validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/promocode/validators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promocode/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/promocode/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/prize.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/prize.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/promocode.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/promocode.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/registration/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/verify_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/verify_email.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +57,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/promocode/forms.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -152,7 +114,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django tests.Test: account.tests.RegistrationUserFormTest">
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <module name="Py88_Maksim_Bezvoditsky_ad_game_site" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -175,6 +137,86 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: account.tests.RegistrationUserFormTest" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="Py88_Maksim_Bezvoditsky_ad_game_site" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="account.tests.RegistrationUserFormTest" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: account.tests.RegistrationUserFormTest.test_form_is_invalid" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="Py88_Maksim_Bezvoditsky_ad_game_site" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="account.tests.RegistrationUserFormTest.test_form_is_invalid" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: account.tests.RegistrationUserFormTest.test_form_is_valid" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="Py88_Maksim_Bezvoditsky_ad_game_site" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="account.tests.RegistrationUserFormTest.test_form_is_valid" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: promocode.tests.RegistrationPromocodeTest.test_url_exists_at_correct_location" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="Py88_Maksim_Bezvoditsky_ad_game_site" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="promocode.tests.RegistrationPromocodeTest.test_url_exists_at_correct_location" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Py88_Maksim_Bezvoditsky_ad_game_site" type="Python.DjangoServer" factoryName="Django server">
@@ -226,6 +268,18 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Django tests.Test: account.tests.RegistrationUserFormTest" />
+        <item itemvalue="Django tests.Test: promocode.tests.RegistrationPromocodeTest.test_url_exists_at_correct_location" />
+        <item itemvalue="Django tests.Test: account.tests.RegistrationUserFormTest.test_form_is_invalid" />
+        <item itemvalue="Django tests.Test: account.tests.RegistrationUserFormTest.test_form_is_valid" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -285,6 +339,11 @@
       <workItem from="1698267528272" duration="9023000" />
       <workItem from="1698421693722" duration="12956000" />
       <workItem from="1698524182682" duration="8724000" />
+      <workItem from="1698679446109" duration="3610000" />
+      <workItem from="1698765014186" duration="10291000" />
+      <workItem from="1698777634012" duration="1180000" />
+      <workItem from="1698783307238" duration="3295000" />
+      <workItem from="1698787726467" duration="784000" />
     </task>
     <task id="LOCAL-00001" summary="v.1">
       <option name="closed" value="true" />
@@ -396,7 +455,11 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Py88_Maksim_Bezvoditsky_ad_game_site$Test__account_tests_RegistrationUserFormTest_test_form_is_valid.coverage" NAME="Test: account.tests.RegistrationUserFormTest.test_form_is_valid Coverage Results" MODIFIED="1698784083600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Py88_Maksim_Bezvoditsky_ad_game_site$Test__account_tests_RegistrationUserFormTest.coverage" NAME="Test: account.tests.RegistrationUserFormTest Coverage Results" MODIFIED="1698785242479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Py88_Maksim_Bezvoditsky_ad_game_site$utils.coverage" NAME="utils Coverage Results" MODIFIED="1697482488605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/account" />
     <SUITE FILE_PATH="coverage/Py88_Maksim_Bezvoditsky_ad_game_site$views.coverage" NAME="views Coverage Results" MODIFIED="1697482502550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/account" />
+    <SUITE FILE_PATH="coverage/Py88_Maksim_Bezvoditsky_ad_game_site$Test__account_tests_RegistrationUserFormTest_test_form_is_invalid.coverage" NAME="Test: account.tests.RegistrationUserFormTest.test_form_is_invalid Coverage Results" MODIFIED="1698784087193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Py88_Maksim_Bezvoditsky_ad_game_site$Test__promocode_tests_RegistrationPromocodeTest_test_url_exists_at_correct_location.coverage" NAME="Test: promocode.tests.RegistrationPromocodeTest.test_url_exists_at_correct_location Coverage Results" MODIFIED="1698785071839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

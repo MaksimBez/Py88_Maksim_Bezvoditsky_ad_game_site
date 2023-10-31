@@ -17,7 +17,11 @@
                 {{ form.password }}
             </div>
             {% if form.errors %}
-                <p>{{ form.errors }}</p>
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endfor %}
             {% endif %}
         </div>
       </div>

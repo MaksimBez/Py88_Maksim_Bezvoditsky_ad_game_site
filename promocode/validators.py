@@ -13,14 +13,15 @@ def promocode_validate(promocode):
         'mcjj371bfp4e',
         'x892jfu21smd',
         'abyrnf83zyr7',
-        'hjnfv489idsj'
+        'hjnfv489idsj',
+        'nfiwsptnx3z1',
+        'fj47wslcor42',
+        'nduhue73647h',
+        'pwen73njfuru',
+        'ncs378dis1ls'
     )
 
     if promocode not in available_promocodes:
-        raise ValidationError('Not available promocode')
+        raise ValidationError('Неверный промокод')
 
     return True
-
-"""
-    Создать валидацию из базы данных
-"""

@@ -24,6 +24,21 @@
                         <h4>Введите промокод с упаковки</h4>
                         {{ form.promocode }}
                         <button class="button btn-reg">Зарегистрировать</button>
+                    {% if form.errors %}
+                        {% for field, errors in form.errors.items %}
+                            {% for error in errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        {% endfor %}
+                    {% endif %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+                    {% if error_2 %}
+                        <p>{{ error_2 }}</p>
+                    {% endif %}
                     </div>
                     <div class="points">
                         <div class="circle-width">
@@ -31,7 +46,11 @@
                                 <p class="points_txt">У ВАС</p>
                                 <p class="points_val">{{ number_of_available_promocodes }} БАЛЛОВ</p>
                             </div>
+                            {% if not error %}
                             <button onclick="document.location={% url 'prize'%}" class="button change_btn">Обменять на шансы</button>
+                            {% else %}
+                                <button style="opacity: 0.8;" class="button change_btn">Обменять на шансы</button>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

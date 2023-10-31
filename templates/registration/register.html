@@ -71,6 +71,13 @@
                     </div>
                 </div>
                 <button class="button">Зарегистрироваться</button>
+                {% if form.errors %}
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                {% endfor %}
+                {% endif %}
             </div>
         </div>
     </form>
