@@ -17,7 +17,7 @@ This is my graduation project.
 <li>На странице Победители, будут отображены победители по каждому призу.<br>
 
 # Технологии
-1. IDE Pycharm
+1. IDE PyCharm
 2. Фреймворк Django
 3. СУБД PostgreSQL
 4. debug_toolbar
